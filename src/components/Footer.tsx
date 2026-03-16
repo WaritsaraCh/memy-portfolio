@@ -79,7 +79,7 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <p className="text-gray-400 flex items-center">
               <span>
-                © {new Date().getFullYear()} Waritsara Chaiyamong. All rights reserved.
+                © {new Date().getFullYear()} Waritsara. All rights reserved.
               </span>
             </p>
           </div>
