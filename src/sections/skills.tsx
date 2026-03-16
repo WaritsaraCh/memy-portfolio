@@ -49,7 +49,20 @@ const SkillsSection = () => {
   ];
 
 
-  const otherSkills = ["Performance Optimization"];
+  const toolsAndDevOps = [
+    "Git",
+    "Docker",
+    "PostgreSQL",
+    "VS Code",
+    "Postman",
+  ];
+
+  const otherSkills = [
+    "Performance Optimization",
+    "Agile/Scrum",
+    "UI/UX Design Basics",
+    "Problem Solving"
+  ];
 
   const skillCard = (title: string, icon: React.ReactNode, skills: string[]) => (
     <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -105,6 +118,11 @@ const SkillsSection = () => {
             "Domain Knowledge",
             <CodeIcon size={24} className="text-blue-600" />,
             domainKnowledge
+          )}
+          {skillCard(
+            "Tools & DevOps",
+            <DatabaseIcon size={24} className="text-blue-600" />,
+            toolsAndDevOps
           )}
           {skillCard(
             "Other Skills",

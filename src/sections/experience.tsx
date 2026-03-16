@@ -128,10 +128,43 @@ const ExperienceSection = () => {
             ))}
           </div>
         </div>
+
+        {/* Education Section */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Education
+            </h2>
+            <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+          </div>
+          
+          <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-800">Bachelor of Science in Computer Science</h3>
+                <div className="flex items-center mt-2 text-gray-700">
+                  <MapPinIcon size={16} className="text-blue-600 mr-2" />
+                  <span>Mahasarakham University</span>
+                </div>
+              </div>
+              <div className="flex items-center mt-4 md:mt-0 text-blue-600">
+                <CalendarIcon size={16} className="mr-2" />
+                <span>Graduated 2025</span>
+              </div>
+            </div>
+            
+            <p className="text-gray-600 mt-4">
+              Focused on software engineering, artificial intelligence, and data structures.
+            </p>
+          </div>
+        </div>
+
         <div className="text-center mt-16">
           <a
             href="#"
-            className="inline-block px-6 py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-100 transition-colors"
+            title="Coming soon"
+            className="inline-block px-6 py-3 bg-white border border-gray-300 text-gray-400 font-medium rounded-md cursor-not-allowed transition-colors"
+            onClick={(e) => e.preventDefault()}
           >
             Download Resume
           </a>

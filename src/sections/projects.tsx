@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import { ExternalLinkIcon, GithubIcon, CodeIcon } from "lucide-react";
+import aliceImg from "../assets/cover/alice.png";
+import dailyImg from "../assets/cover/dailytasks.png";
+import artImg from "../assets/cover/art-gallery.png";
+import faceImg from "../assets/cover/face-recognition-cover.png";
+import ocrImg from "../assets/cover/thai-id-ocr-cover.png";
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState("all");
   const projects = [
@@ -8,7 +13,7 @@ const ProjectsSection = () => {
       title: "E-commerce Platform",
       description:
         "A full-featured online store with product management, cart functionality, and payment processing.",
-      image: "src/assets/cover/alice.png",
+      image: aliceImg,
       tags: ["Next.js", "Tailwind CSS"],
       category: "frontend",
       liveLink: "https://alice-furniture-web.vercel.app/",
@@ -19,7 +24,7 @@ const ProjectsSection = () => {
       title: "Daily Task App",
       description:
         "A productivity tool for organizing tasks with drag-and-drop functionality and team collaboration features.",
-      image: "src/assets/cover/dailytasks.png",
+      image: dailyImg,
       tags: ["React", "TypeScript", "Tailwind CSS"],
       category: "frontend",
       liveLink: "https://react-daily-tasks.vercel.app/",
@@ -30,7 +35,7 @@ const ProjectsSection = () => {
       title: "Lumière | Contemporary Art",
       description:
         "An elegant platform showcasing contemporary art with a sophisticated aesthetic.",
-      image: "src/assets/cover/art-gallery.png",
+      image: artImg,
       tags: ["Next.js", "TypeScript", "Tailwind CSS"],
       category: "frontend",
       liveLink: "https://art-gallery-website-ten-hazel.vercel.app/",
@@ -41,32 +46,39 @@ const ProjectsSection = () => {
       title: "Real-time Facial Recognition System",
       description:
         "A high-performance computer vision pipeline utilizing MediaPipe for precise face detection and InsightFace for robust identity verification and feature extraction.",
-      image: "src/assets/cover/face-recognition-cover.png", 
+      image: faceImg,
       tags: ["Python", "MediaPipe", "InsightFace", "OpenCV"],
+      category: "ai-vision",
+      liveLink: "#",
+      githubLink: "https://github.com/WaritsaraCh/face-recognition-web.git",
+    },
+    {
+      id: 5,
+      title: "Demo Simple RAG Chatbot",
+      description: "A demonstration of Retrieval-Augmented Generation for enterprise question-answering with vector databases.",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600&h=400",
+      tags: [
+        "Python",
+        "Large Language Model (LLM)",
+        "Langchain",
+        "Vector Database",
+        "Prompt Engineering",
+      ],
       category: "ai-vision",
       liveLink: "#",
       githubLink: "#",
     },
     {
-      id: 5,
-      title: 'Demo Simple RAG Chatbot',
-      description: '',
-      image: '',
-      tags: ['Python', 'Large Language Model (LLM)', 'Langchain', 'Vector Database', 'Prompt Engineering'],
-      category: 'ai-vision',
-      liveLink: '#',
-      githubLink: '#'
-    }, 
-    // {
-    //   id: 6,
-    //   title: 'API Service Platform',
-    //   description: 'A RESTful API service with authentication, rate limiting, and comprehensive documentation.',
-    //   image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1491&q=80',
-    //   tags: ['Node.js', 'Express', 'JWT', 'Swagger'],
-    //   category: 'backend',
-    //   liveLink: '#',
-    //   githubLink: '#'
-    // }
+      id: 6,
+      title: "Thai ID Card OCR & Data Extraction API",
+      description:
+        "An automated OCR API service that extracts personal information from Thai National ID cards and returns structured data in JSON format for seamless integration.",
+      image: ocrImg, 
+      tags: ["Python", "FastAPI", "OCR", "OpenCV"], 
+      category: "backend",
+      liveLink: "#",
+      githubLink: "#",
+    },
   ];
   const filteredProjects =
     activeFilter === "all"
@@ -149,21 +161,27 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between mt-auto">
+                  {project.liveLink !== "#" && (
                   <a
                     href={project.liveLink}
+                    target="_blank" rel="noopener noreferrer"
                     className="flex items-center text-blue-600 hover:text-blue-800 transition-colors"
                   >
                     <ExternalLinkIcon size={16} className="mr-1" />
                     <span>Live Demo</span>
                   </a>
+                  )}
+                  {project.githubLink !== "#" && (
                   <a
                     href={project.githubLink}
-                    className="flex items-center text-gray-700 hover:text-gray-900 transition-colors"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center text-gray-700 hover:text-gray-900 transition-colors ml-auto"
                   >
                     <GithubIcon size={16} className="mr-1" />
                     <span>Source Code</span>
                   </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -171,7 +189,8 @@ const ProjectsSection = () => {
         </div>
         <div className="text-center mt-12">
           <a
-            href="#"
+            href="https://github.com/WaritsaraCh"
+            target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-gray-800 text-white font-medium rounded-md hover:bg-gray-700 transition-colors"
           >
             <CodeIcon size={20} className="mr-2" />

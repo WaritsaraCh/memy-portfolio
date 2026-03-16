@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeartIcon, ArrowUpIcon } from 'lucide-react'
+import { HeartIcon, ArrowUpIcon, GithubIcon, LinkedinIcon, FacebookIcon, MailIcon } from 'lucide-react'
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#home" className="text-xl font-bold">
-              <span className="text-blue-400">Dev</span>Portfolio
+              <span className="text-blue-400">Me</span>my
             </a>
             <p className="mt-2 text-gray-400 max-w-md">
               Building exceptional digital experiences with clean, efficient,
@@ -29,12 +29,6 @@ const Footer = () => {
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
                   Home
-                </a>
-                <a
-                  href="#about"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
-                >
-                  About
                 </a>
                 <a
                   href="#skills"
@@ -65,21 +59,18 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-3">Connect</h4>
               <div className="flex space-x-4">
-                {['github', 'linkedin', 'twitter', 'instagram'].map(
-                  (social) => (
-                    <a
-                      key={social}
-                      href="#"
-                      className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors"
-                    >
-                      <img
-                        src={`https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/${social}.svg`}
-                        alt={social}
-                        className="w-5 h-5 filter invert"
-                      />
-                    </a>
-                  ),
-                )}
+                <a href="https://github.com/WaritsaraCh" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 hover:text-blue-400 transition-colors">
+                  <GithubIcon size={20} />
+                </a>
+                <a href="https://www.linkedin.com/in/waritsara-chaiyamong-277101373/" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 hover:text-blue-400 transition-colors">
+                  <LinkedinIcon size={20} />
+                </a>
+                <a href="#" className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 hover:text-blue-400 transition-colors">
+                  <FacebookIcon size={20} />
+                </a>
+                <a href="mailto:waritsara.ch@example.com" className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 hover:text-blue-400 transition-colors">
+                  <MailIcon size={20} />
+                </a>
               </div>
             </div>
           </div>
@@ -88,7 +79,7 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <p className="text-gray-400 flex items-center">
               <span>
-                © {new Date().getFullYear()} John Doe. All rights reserved.
+                © {new Date().getFullYear()} Waritsara Chaiyamong. All rights reserved.
               </span>
             </p>
           </div>

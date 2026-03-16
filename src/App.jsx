@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection';
 import ProjectsSection from './sections/projects';
 import SkillsSection from './sections/skills';
 import ExperienceSection from './sections/experience';
+import ContactSection from './sections/contact';
 export function App() {
   return <div className="min-h-screen bg-gray-50">
       <Header />
@@ -14,7 +15,7 @@ export function App() {
         <SkillsSection />
         <ProjectsSection /> 
         <ExperienceSection />
-        {/* <ContactSection /> */}
+        <ContactSection />
       </main>
       <Footer />
     </div>;
