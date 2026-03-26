@@ -58,7 +58,7 @@ const Header = () => {
   return <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-4' : 'bg-white/80 backdrop-blur-sm md:bg-transparent py-4 md:py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#home" className="text-xl font-bold text-gray-800">
-          <span className="text-blue-600">Me</span>my
+          <span className="text-blue-600">Waritsara</span>portfolio
         </a>
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
