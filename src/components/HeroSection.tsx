@@ -5,7 +5,7 @@ import {
   LinkedinIcon,
   TwitterIcon,
 } from "lucide-react";
-import profile from "../assets/profile.jpg";
+import profile2 from "../assets/profile2.jpg";
 
 const HeroSection = () => {
   return (
@@ -82,7 +82,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
                 <img
-                  src={profile}
+                  src={profile2}
                   alt="Waritsara Chaiyamong"
                   className="w-full h-full object-cover"
                 />
